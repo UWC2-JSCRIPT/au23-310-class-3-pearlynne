@@ -3,7 +3,14 @@
 // i.e. {descr: 'Coke', price: 1.99}
 // function should log each item to the console and log a total price
 
-
+const logReceipt = (...items) => {
+	let total = 0;
+	items.forEach((item) => { // using rest parameters
+		total += item.price;
+		console.log(item.descr + " - $" + item.price)}
+	)
+	console.log("Total cost is $" + total)
+}
 
 // Check
 logReceipt(
