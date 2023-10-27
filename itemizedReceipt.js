@@ -23,3 +23,9 @@ logReceipt(
 // Chips & Salsa - $2.99
 // Sprite - $1.99
 // Total - $10.97
+
+
+
+// EXTRA CREDIT
+// - 1 point for itemized receipt without subtotal and taxes
+// - 2 points if it has subtotal and taxes built in
