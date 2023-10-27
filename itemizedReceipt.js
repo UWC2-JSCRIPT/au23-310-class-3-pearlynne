@@ -4,28 +4,36 @@
 // function should log each item to the console and log a total price
 
 const logReceipt = (...items) => {
+	const TAXRATE = 0.1025;
+	let subtotal = 0;
 	let total = 0;
-	items.forEach((item) => { // using rest parameters
-		total += item.price;
-		console.log(item.descr + " - $" + item.price)}
+
+	items.forEach((item) => { 
+		subtotal += item.price;
+		console.log(`${(item.descr)} - $${(item.price)}`)
+	}
 	)
-	console.log("Total cost is $" + total)
+	
+	// Get salesTax with subtotal
+	salesTax = subtotal * TAXRATE;
+
+	// Get total afert taxes
+	total = subtotal + salesTax;
+
+	// Print subtotal, sales tax, and total (alternative to dedent)
+	console.log(`Subtotal - $${(subtotal)}`)
+	console.log(`Sales tax 10.25% - $${(salesTax.toFixed(2))}`)
+	console.log(`Total - $${(total.toFixed(2))}`)
 }
 
 // Check
 logReceipt(
-  { descr: 'Burrito', price: 5.99 },
-  { descr: 'Chips & Salsa', price: 2.99 },
-  { descr: 'Sprite', price: 1.99 }
+	{ descr: 'Burrito', price: 5.99 },
+	{ descr: 'Chips & Salsa', price: 2.99 },
+	{ descr: 'Sprite', price: 1.99 }
 );
 // should log something like:
 // Burrito - $5.99
 // Chips & Salsa - $2.99
 // Sprite - $1.99
 // Total - $10.97
-
-
-
-// EXTRA CREDIT
-// - 1 point for itemized receipt without subtotal and taxes
-// - 2 points if it has subtotal and taxes built in
