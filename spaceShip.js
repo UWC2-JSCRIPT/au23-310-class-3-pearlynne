@@ -10,7 +10,7 @@ class SpaceShip {
 
 	accelerate(){
 		const {name, topSpeed} = this;
-		console.log(`${name} is moving to ${topSpeed}`)
+		console.log(`${name} moving to ${topSpeed}`);
 	}
 }
 
@@ -18,7 +18,9 @@ class SpaceShip {
 // 2. Call the constructor with a couple ships, 
 // and call accelerate on both of them.
 
-const ship1 = new SpaceShip("ship1", 100)
-ship1.accelerate()
-const ship2 = new SpaceShip("ship2", 300)
-ship2.accelerate()
+const sanAntonio = new SpaceShip("San Antonio", 100);
+const konTiki = new SpaceShip("Kon Tiki", 300);
+
+// Call method Accelerate
+sanAntonio.accelerate();
+konTiki.accelerate();
