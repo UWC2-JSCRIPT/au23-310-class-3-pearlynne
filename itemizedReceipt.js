@@ -10,7 +10,7 @@ const logReceipt = (...items) => {
 
 	items.forEach((item) => {
 		subtotal += item.price;
-		console.log(`${(item.descr)} - $${(item.price)}`)
+		console.log(`${item.descr} - $${item.price}`)
 	}
 	)
 
@@ -21,9 +21,9 @@ const logReceipt = (...items) => {
 	total = subtotal + salesTax;
 
 	// Print subtotal, sales tax, and total (alternative to dedent)
-	console.log(`Subtotal - $${(subtotal)}`);
-	console.log(`Sales tax 10.25% - $${(salesTax.toFixed(2))}`);
-	console.log(`Total - $${(total.toFixed(2))}`);
+	console.log(`Subtotal - $${subtotal}`);
+	console.log(`Sales tax 10.25% - $${salesTax.toFixed(2)}`);
+	console.log(`Total - $${total.toFixed(2)}`);
 }
 
 // Check
