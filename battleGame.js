@@ -1,36 +1,41 @@
 // 1. Create attack function below.  This will take the following parameters:
 // attackingPlayer, defendingPlayer, baseDamage, variableDamage
 
-// function attack(attackingPlayer, defendingPlayer, baseDamage, variableDamage) {
-// 	// Random number after getting variableDamage (not either or)
-// 	let randomDamage = Math.floor(Math.random() * (variableDamage + 1)); // 
-// 	let totalDamage = baseDamage + randomDamage;
+/* 
+function attack(attackingPlayer, defendingPlayer, baseDamage, variableDamage) {
+	// Random number after getting variableDamage (not either or)
+	let randomDamage = Math.floor(Math.random() * (variableDamage + 1));  
+	let totalDamage = baseDamage + randomDamage;
 
-// 	defendingPlayer.health -= totalDamage;
+	defendingPlayer.health -= totalDamage;
 
-// 	return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} damage.`;
-// }
+	return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} damage.`;
+}
+*/
 
 
 // 2. Create player1 and player2 objects below
 // Each should have a name property of your choosing, and health property equal to 10
 
 let player1 = {
-	name: "P1",
+	name: "Jabby kitty",
 	health: 10,
 }
 
 let player2 = {
-	name: "P2",
+	name: "Puppow",
 	health: 10,
 }
 
 // 3. Refactor attack function to an arrow function.  Comment out function above.
 
-const attack = (attackingPlayer, defendingPlayer, baseDamage, variableDamage) => { 
-	totalDamage = baseDamage + Math.floor(Math.random() * (variableDamage + 1));
-	defendingPlayer.health = defendingPlayer.health - totalDamage;
-	return `Merlin hits James Bond for ${totalDamage} damage.`;
+const attack = (attackingPlayer, defendingPlayer, baseDamage, variableDamage) => {
+
+	let randomDamage = Math.floor(Math.random() * (variableDamage + 1));
+	let totalDamage = baseDamage + randomDamage;
+	defendingPlayer.health -= totalDamage;
+
+	return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} damage.`;
 }
 
 
