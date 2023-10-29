@@ -1,5 +1,5 @@
-// Wrap function in IIFE 
-(function soccerGame() {
+// Assign IIFE to new variable to store return value (orderTeams function)
+const orderTeams = (function () {
 
 	const RESULT_VALUES = {
 		w: 3,
@@ -35,7 +35,7 @@
 		});
 
 		return totalPoints;
-	};
+	}
 
 	// Check getTotalPoints
 	console.log(getTotalPoints('wwdl')); // should equal 7
@@ -53,15 +53,19 @@
 			teamPoints = getTotalPoints(team.results);
 			console.log(`${teamName}: ${teamPoints}`);
 		})
+
 	}
 
+	// Return orderTeams function (export outside IIFE)
+	return orderTeams
 
-	// Check orderTeams
-	orderTeams(
-		{ name: 'Sounders', results: 'wwdl' },
-		{ name: 'Galaxy', results: 'wlld' }
-	);
-	// should log the following to the console:
-	// Sounders: 7
-	// Galaxy: 4
-})()
+})();
+
+// Call variable orderTeams (which returns orderTeams function)
+orderTeams(
+	{ name: 'Sounders', results: 'wwdl' },
+	{ name: 'Galaxy', results: 'wlld' }
+)
+// should log the following to the console:
+// Sounders: 7
+// Galaxy: 4
