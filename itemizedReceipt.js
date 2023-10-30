@@ -17,14 +17,14 @@ const logReceipt = (...items) => {
 	// Get salesTax with subtotal
 	salesTax = subtotal * TAXRATE;
 
-	// Get total afert taxes
+	// Get total after taxes
 	total = subtotal + salesTax;
 
 	// Print subtotal, sales tax, and total (alternative to dedent)
 	console.log(`Subtotal - $${subtotal}`);
 	console.log(`Sales tax 10.25% - $${salesTax.toFixed(2)}`);
 	console.log(`Total - $${total.toFixed(2)}`);
-}
+};
 
 // Check
 logReceipt(

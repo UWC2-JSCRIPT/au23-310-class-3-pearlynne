@@ -8,8 +8,8 @@ class SpaceShip {
 		this.topSpeed = topSpeed;
 	}
 
-	accelerate(){
-		const {name, topSpeed} = this;
+	accelerate() {
+		const { name, topSpeed } = this;
 		console.log(`${name} moving to ${topSpeed}`);
 	}
 }

@@ -5,9 +5,11 @@
 // '206 333 4444'
 // Returns true if valid, false if not valid
 
-const regExp = /^\(\d{3}\)[-\s]\d{3}[-\s]\d{4}$/;
-
 function testPhoneNumber(num) {
+	// Create regex pattern
+	const regExp = /^\(\d{3}\)[-\s]\d{3}[-\s]\d{4}$/;
+
+	// Test for regex pattern
 	if (regExp.test(num) == true) {
 		return true;
 	} else {
@@ -46,18 +48,17 @@ function parsePhoneNumber(num) {
 	// but assume accurate format
 	const regExtract = /\d{3,4}/g;
 
-
 	// Use exec to get an array of matching patterns 
 	while ((myArray = regExtract.exec(num)) !== null) {
 		getDigits.push(myArray[0]) // Index 0 is the pattern
-	};
+	}
 
 	// Create contact Object for areaCode and 
 	// phoneNumber by concatenating strings
 	let contact = {
 		areaCode: getDigits[0],
 		phoneNumber: getDigits[1].concat(getDigits[2]),
-	};
+	}
 	
 	return contact;
 }
