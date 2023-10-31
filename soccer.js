@@ -1,5 +1,5 @@
-// Assign IIFE to new variable to store return value (orderTeams function)
-const orderTeams = (function () {
+// Assign IIFE to new variable to store return value (orderResults function)
+const orderResults = (function () {
 
 	const RESULT_VALUES = {
 		w: 3,
@@ -40,12 +40,12 @@ const orderTeams = (function () {
 	// Check getTotalPoints
 	console.log(getTotalPoints('wwdl')); // should equal 7
 
-	// Create orderTeams function that accepts as many team objects as desired, 
+	// Create orderResults function that accepts as many team objects as desired, 
 	// each argument is a team object in the format { name, results }
 	// i.e. {name: 'Sounders', results: 'wwlwdd'}
 	// Logs each entry to the console as "Team name: points"
 
-	function orderTeams(...args) {
+	function orderResults(...args) {
 		// args = Array.from(arguments)
 
 		args.forEach(team => {
@@ -56,13 +56,13 @@ const orderTeams = (function () {
 
 	}
 
-	// Return orderTeams function (export outside IIFE)
-	return orderTeams
+	// Return orderResults function (export outside IIFE)
+	return orderResults
 
 })();
 
-// Call variable orderTeams (which returns orderTeams function)
-orderTeams(
+// Call variable orderResults (which returns orderResults function)
+orderResults(
 	{ name: 'Sounders', results: 'wwdl' },
 	{ name: 'Galaxy', results: 'wlld' }
 )
